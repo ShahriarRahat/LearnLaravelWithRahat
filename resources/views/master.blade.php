@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
     <head>
-        <title>Products List</title>
+        <title>Learn Laravel with JM Rashed</title>
         <meta charset="utf-8">
         <meta name="author" description='Shahriar Rahat'>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{url('public/css/js/main.css')}}">
+        <link rel="stylesheet" href="{{url('public/css/css/main.css')}}">
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,14 +29,14 @@
               </form>
             </div>
           </nav>
-        <div class="container">
+        <div>
                 @yield('content')
         </div>
         <footer class="footer">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>@copy right 2021 | developed by rahat</p>
+                        <p>@copyright 2021 | Developed by rahat</p>
                     </div>
                 </div>
             </div>

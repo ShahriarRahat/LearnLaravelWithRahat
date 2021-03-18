@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
+use GrahamCampbell\ResultType\Success;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -25,7 +26,6 @@ class StudentController extends Controller
      */
     public function create()
     {
-        $new = new Student();
         return view('student_create');
     }
 
@@ -37,9 +37,18 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $new = new Student();
+        $new->name = $request->name;
+        $new->class = $request->class;
+        $new->roll = $request->roll;
+        $new->section = $request->section;
+        $new->id_number = $request->id_number;
+        $new->mobile_number = $request->mobile_number;
+        $new->exam = $request->exam;
+        $new->save();
+        return redirect('students')->with('Success','Added Succesfully');
     }
-
+    
     /**
      * Display the specified resource.
      *
